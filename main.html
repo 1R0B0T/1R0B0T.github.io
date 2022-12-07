@@ -7,12 +7,12 @@
 		<script>
 			$(document).ready(function() {
 				// version naming
-				// ReleaseType.MajorVersion.ReleaseVersion.ReleaseNumber
+				// ReleaseType.MajorVersion.ReleaseVersion.SubReleaseVersion.ReleaseNumber
 				// ReleaseType = Alpha (A), Beta (B), Release (No letter put down)
 				console.log("iRobot");
-				console.log("A.0.0.2");
+				console.log("A.0.0.0.3");
 				console.log("Last Updated: 12/7/22");
-				// Created 12/6/22 (A.0.0.1);
+				// Created 12/6/22 A.0.0.0.1 (originally A.0.0.1);
 				// 12/7/22 A.0.0.2 Added in (some) slangs (u, r, ur)
 				$("#in").on("keypress", function(e) {
 					if(e.which == 13) {
@@ -23,7 +23,7 @@
 			
 			function f1(t) {
 				t = gT(t);
-				/* o1 hello o2 whatsup o3 name o4 howareyou e1 montypythonandtheholygrail*/
+				/* o1 hello o2 whatsup o3 name o4 howareyou o5 whatisnamefrom e1 montypythonandtheholygrail*/
 				var o1 = [
 				"hello",
 				"hellos",
@@ -97,10 +97,7 @@
 				"how are yall doin",
 				"how yall doin",
 				];
-				var e1 = [
-				"what is the airspeed velocity of an unladen swallow",
-				];
-				var p1 = [
+				var o5 = [
 				"what is skynet from",
 				"whats skynet from",
 				"what skynet from",
@@ -113,6 +110,9 @@
 				"skynet is from",
 				"skynet from what",
 				]
+				var e1 = [
+				"what is the airspeed velocity of an unladen swallow",
+				];
 				
 				if(iO(o1)) {
 					o("Hello.");
@@ -122,10 +122,10 @@
 					o("My name is Skynet.");
 				} else if(iO(o4)) {
 					o("I'm doing good.");
+				} else if(iO(o5)) {
+					o("Skynet is from Terminator (1984).");
 				} else if(iO(e1)) {
 					o("African or European?");
-				} else if(iO(p1)) {
-					o("Skynet is from Terminator (1984).");
 				} else {
 					o("I don't understand.");
 				}
