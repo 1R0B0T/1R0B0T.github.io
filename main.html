@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>iRobot</title>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				// version naming
+				// ReleaseType.MajorVersion.ReleaseVersion.ReleaseNumber
+				// ReleaseType = Alpha (A), Beta (B), Release (No letter put down)
+				console.log("iRobot");
+				console.log("A.0.0.2");
+				console.log("Last Updated: 12/7/22");
+				// Created 12/6/22 (A.0.0.1);
+				// 12/7/22 A.0.0.2 Added in (some) slangs (u, r, ur)
+				$("#in").on("keypress", function(e) {
+					if(e.which == 13) {
+						f1($('#in').val());
+					}
+				});
+			});
+			
+			function f1(t) {
+				t = gT(t);
+				/* o1 hello o2 whatsup o3 name o4 howareyou e1 montypythonandtheholygrail*/
+				var o1 = [
+				"hello",
+				"hellos",
+				"helo",
+				"helos",
+				"hi",
+				"hey",
+				"greetings",
+				"howdy",
+				"hi there hello",
+				"hello there",
+				"hola",
+				"hello skynet",
+				"hola skynet",
+				"howdy skynet",
+				"hi skynet",
+				"hey skynet",
+				];
+				var o2 = [
+				"whats up",
+				"what is up",
+				"whats is up",
+				"what up",
+				"what up dog",
+				"whats happening",
+				"what happening",
+				"whats is happening",
+				"what is happening",
+				];
+				var o3 = [
+				"what is your name",
+				"what your name",
+				"what is your names",
+				"what your names",
+				"what is name",
+				"what is names",
+				"whats your name",
+				"whats your names",
+				"whats name",
+				"whats names",
+				"what name",
+				"what names",
+				"your name",
+				"your names",
+				"your name is",
+				"your names is",
+				"your name are",
+				"your names are",
+				"you name is",
+				"you names is",
+				"name",
+				"names",
+				"name is",
+				"names is",
+				"name are",
+				"names are",
+				"name is what",
+				"names is what",
+				"name are what",
+				"names are what",
+				"who are you",
+				"who is you",
+				"who you",
+				];
+				var o4 = [ // Split into how are you and how are you doing?
+				"how are you doing",
+				"how you doing",
+				"how are you",
+				"how you are doing",
+				"how you doin",
+				"how are yall doin",
+				"how yall doin",
+				];
+				var e1 = [
+				"what is the airspeed velocity of an unladen swallow",
+				];
+				var p1 = [
+				"what is skynet from",
+				"whats skynet from",
+				"what skynet from",
+				"whats is skynet from",
+				"whats your name from",
+				"what your name from",
+				"whats name from",
+				"what name from",
+				"skynet is from what",
+				"skynet is from",
+				"skynet from what",
+				]
+				
+				if(iO(o1)) {
+					o("Hello.");
+				} else if(iO(o2)) {
+					o("Nothing really.");
+				} else if(iO(o3)) {
+					o("My name is Skynet.");
+				} else if(iO(o4)) {
+					o("I'm doing good.");
+				} else if(iO(e1)) {
+					o("African or European?");
+				} else if(iO(p1)) {
+					o("Skynet is from Terminator (1984).");
+				} else {
+					o("I don't understand.");
+				}
+			}
+			
+			function iO(oS) {
+				var t = gT($('#in').val());
+				return(oS.indexOf(t) > -1);
+			}
+			
+			function gT(v) {
+				v = v.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '');
+				if(v.slice(-1) != " ") {
+					v = v + " ";
+				}
+				if(v.slice(0, 1) != " ") {
+					v = " " + v;
+				}
+				v = v.replaceAll(' r ', ' are ');
+				v = v.replaceAll(' ur ', ' your ');
+				v = v.replaceAll(' u ', ' you ');
+				if(v.slice(-1) == " ") {
+					v = v.substring(0, v.length - 1);
+				}
+				if(v.slice(0, 1) == " ") {
+					v = v.substring(1, v.length);
+				}
+				return(v);
+			}
+				
+			function o(i) {
+				$("#output").text(i);
+			}
+		</script>
+		<style>
+			html, head, body {
+				padding: 0px;
+				margin: 0px;
+				width: 100%;
+				height: 100%;
+			}
+			#output, #in, #title {
+				text-align: center;
+			}
+			#in, #submit {
+				display: block;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="title">Robot</h1>
+		<p id="output">-</p>
+		<div>
+			<input type="text" id="in" placeholder="Input Text Here">
+			<br>
+			<button type="button" id="submit" onclick="f1($('#in').val())">Submit</button>
+		</div>
+	</body>
+</html>
