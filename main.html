@@ -9,9 +9,6 @@
 				// version naming
 				// ReleaseType.MajorVersion.ReleaseVersion.SubReleaseVersion.ReleaseNumber
 				// ReleaseType = Alpha (A), Beta (B), Release (No letter put down)
-				console.log("iRobot");
-				console.log("A.0.0.0.3");
-				console.log("Last Updated: 12/7/22");
 				// Created 12/6/22 A.0.0.0.1 (originally A.0.0.1);
 				// 12/7/22 A.0.0.2 Added in (some) slangs (u, r, ur)
 				$("#in").on("keypress", function(e) {
@@ -19,6 +16,13 @@
 						f1($('#in').val());
 					}
 				});
+				function ver() {
+					var v = "A.0.0.0.4";
+					console.log("iRobot");
+					console.log(v);
+					console.log("Last Updated: 12/7/22");
+					$("#version").text(v);
+				}
 			});
 			
 			function f1(t) {
@@ -167,7 +171,7 @@
 				width: 100%;
 				height: 100%;
 			}
-			#output, #in, #title {
+			#output, #in, #title, #version {
 				text-align: center;
 			}
 			#in, #submit {
@@ -178,6 +182,7 @@
 	</head>
 	<body>
 		<h1 id="title">iRobot</h1>
+		<h3 id="version" onload="ver()"></h3>
 		<p id="output">-</p>
 		<div>
 			<input type="text" id="in" placeholder="Input Text Here">
