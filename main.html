@@ -11,18 +11,16 @@
 				// ReleaseType = Alpha (A), Beta (B), Release (No letter put down)
 				// Created 12/6/22 A.0.0.0.1 (originally A.0.0.1);
 				// 12/7/22 A.0.0.2 Added in (some) slangs (u, r, ur)
+				var v = "A.0.0.0.6";
+				console.log("iRobot");
+				console.log(v);
+				console.log("Last Updated: 12/7/22");
+				$("#version").text(v);
 				$("#in").on("keypress", function(e) {
 					if(e.which == 13) {
 						f1($('#in').val());
 					}
 				});
-				function ver() {
-					var v = "A.0.0.0.5";
-					console.log("iRobot");
-					console.log(v);
-					console.log("Last Updated: 12/7/22");
-					$("#version").text(v);
-				}
 			});
 			
 			function f1(t) {
@@ -180,7 +178,7 @@
 			}
 		</style>
 	</head>
-	<body onload="ver()">
+	<body>
 		<h1 id="title">iRobot</h1>
 		<h3 id="version"></h3>
 		<p id="output">-</p>
