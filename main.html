@@ -11,10 +11,10 @@
 				// ReleaseType = Alpha (A), Beta (B), Release (No letter put down)
 				// Created 12/6/22 A.0.0.0.1 (originally A.0.0.1);
 				// 12/7/22 A.0.0.2 Added in (some) slangs (u, r, ur)
-				var v = "A.0.0.0.8";
+				var v = "A.0.0.0.9";
 				console.log("iRobot");
 				console.log(v);
-				console.log("Last Updated: 12/7/22");
+				console.log("Last Updated: 12/8/22");
 				$("#version").text(v);
 				$("#in").on("keypress", function(e) {
 					if(e.which == 13) {
@@ -27,92 +27,98 @@
 				t = gT(t);
 				/* o1 hello o2 whatsup o3 name o4 howareyou o5 whatisnamefrom e1 montypythonandtheholygrail*/
 				var o1 = [
-				"hello",
-				"hellos",
-				"helo",
-				"helos",
-				"hi",
-				"hey",
-				"greetings",
-				"howdy",
-				"hi there hello",
-				"hello there",
-				"hola",
-				"hello skynet",
-				"hola skynet",
-				"howdy skynet",
-				"hi skynet",
-				"hey skynet",
+					"hello",
+					"hellos",
+					"helo",
+					"helos",
+					"hi",
+					"hey",
+					"greetings",
+					"howdy",
+					"hi there hello",
+					"hello there",
+					"hola",
+					"hello skynet",
+					"hola skynet",
+					"howdy skynet",
+					"hi skynet",
+					"hey skynet",
 				];
 				var o2 = [
-				"whats up",
-				"what is up",
-				"whats is up",
-				"what up",
-				"what up dog",
-				"whats happening",
-				"what happening",
-				"whats is happening",
-				"what is happening",
+					"whats up",
+					"what is up",
+					"whats is up",
+					"what up",
+					"what up dog",
+					"whats happening",
+					"what happening",
+					"whats is happening",
+					"what is happening",
 				];
 				var o3 = [
-				"what is your name",
-				"what your name",
-				"what is your names",
-				"what your names",
-				"what is name",
-				"what is names",
-				"whats your name",
-				"whats your names",
-				"whats name",
-				"whats names",
-				"what name",
-				"what names",
-				"your name",
-				"your names",
-				"your name is",
-				"your names is",
-				"your name are",
-				"your names are",
-				"you name is",
-				"you names is",
-				"name",
-				"names",
-				"name is",
-				"names is",
-				"name are",
-				"names are",
-				"name is what",
-				"names is what",
-				"name are what",
-				"names are what",
-				"who are you",
-				"who is you",
-				"who you",
+					"what is your name",
+					"what your name",
+					"what is your names",
+					"what your names",
+					"what is name",
+					"what is names",
+					"whats your name",
+					"whats your names",
+					"whats name",
+					"whats names",
+					"what name",
+					"what names",
+					"your name",
+					"your names",
+					"your name is",
+					"your names is",
+					"your name are",
+					"your names are",
+					"you name is",
+					"you names is",
+					"name",
+					"names",
+					"name is",
+					"names is",
+					"name are",
+					"names are",
+					"name is what",
+					"names is what",
+					"name are what",
+					"names are what",
+					"who are you",
+					"who is you",
+					"who you",
 				];
 				var o4 = [ // Split into how are you and how are you doing?
-				"how are you doing",
-				"how you doing",
-				"how are you",
-				"how you are doing",
-				"how you doin",
-				"how are you doin",
+					"how are you doing",
+					"how you doing",
+					"how are you",
+					"how you are doing",
+					"how you doin",
+					"how are you doin",
 				];
 				var o5 = [
-				"what is skynet from",
-				"whats skynet from",
-				"what skynet from",
-				"whats is skynet from",
-				"whats your name from",
-				"what your name from",
-				"whats name from",
-				"what name from",
-				"skynet is from what",
-				"skynet is from",
-				"skynet from what",
+					"what is skynet from",
+					"whats skynet from",
+					"what skynet from",
+					"whats is skynet from",
+					"whats your name from",
+					"what your name from",
+					"whats name from",
+					"what name from",
+					"skynet is from what",
+					"skynet is from",
+					"skynet from what",
+				]
+				var o6 = [
+					"what is skynet",
+					"whats is skynet",
+					"what skynet",
+					"whats skynet",
 				]
 				var e1 = [
-				"what is the airspeed velocity of an unladen swallow",
+					"what is the airspeed velocity of an unladen swallow",
 				];
 				
 				if(iO(o1)) {
@@ -125,6 +131,8 @@
 					o("I'm doing good.");
 				} else if(iO(o5)) {
 					o("Skynet is from Terminator (1984).");
+				} else if(iO(o6)) {
+					o("Skynet is the AI antagonist of the Terminator movies, who became self-aware at 2:14 a.m., EDT, on August 29 1997.");
 				} else if(iO(e1)) {
 					o("African or European?");
 				} else {
