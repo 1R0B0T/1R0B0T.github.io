@@ -11,7 +11,7 @@
 				// ReleaseType = Alpha (A), Beta (B), Release (No letter put down)
 				// Created 12/6/22 A.0.0.0.1 (originally A.0.0.1)
 				// 12/10/22 A-0.0.11 changed template from RT.MJ.RV.SRV.RN to RT-MV.RV.RN. This may change in official releases.
-				var v = "A-0.0.15";
+				var v = "A-0.0.16";
 				console.log("iRobot");
 				console.log(v);
 				console.log("Last Updated: 12/8/22");
@@ -109,9 +109,10 @@
 					"skynet is from what",
 					"skynet is from",
 					"skynet from what",
+					"skynets from what",
 				]
 				var o6 = [ // What's Skynet
-					"what is skynet",
+//					"what is skynet",
 					"whats is skynet",
 					"what skynet",
 					"whats skynet",
@@ -181,6 +182,9 @@
 				v = v.replaceAll(' r ', ' are ');
 				v = v.replaceAll(' ur ', ' your ');
 				v = v.replaceAll(' u ', ' you ');
+				v = v.replaceAll(' fav ', ' favorite ');
+				v = v.replaceAll(' what is ', ' whats ');
+				v = v.replaceAll(' whats is ', ' whats ');
 				if(v.slice(-1) == " ") {
 					v = v.substring(0, v.length - 1);
 				}
