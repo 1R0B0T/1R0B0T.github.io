@@ -4,7 +4,7 @@ This is meant to be able to answer questions as if it was a human. It is not mea
 
 Link: [Link](https://agmpenguin2.github.io/main) <!-- [https://agmpenguin2.github.io/main](https://agmpenguin2.github.io/main) -->
 
-<details o>
+<details>
 <summary>Options</summary>
 
 * 1r0b0t
