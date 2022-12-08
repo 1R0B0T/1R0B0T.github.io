@@ -11,7 +11,7 @@
 				// ReleaseType = Alpha (A), Beta (B), Release (No letter put down)
 				// Created 12/6/22 A.0.0.0.1 (originally A.0.0.1)
 				// 12/10/22 A-0.0.11 changed template from RT.MJ.RV.SRV.RN to RT-MV.RV.RN. This may change in official releases.
-				var v = "A-0.0.16";
+				var v = "A-0.0.17";
 				console.log("iRobot");
 				console.log(v);
 				console.log("Last Updated: 12/8/22");
@@ -112,8 +112,6 @@
 					"skynets from what",
 				]
 				var o6 = [ // What's Skynet
-//					"what is skynet",
-					"whats is skynet",
 					"what skynet",
 					"whats skynet",
 				]
@@ -205,10 +203,10 @@
 				width: 100%;
 				height: 100%;
 			}
-			#output, #in, #title, #version {
+			#output, #in, #title, #version, #oin {
 				text-align: center;
 			}
-			#in, #submit {
+			#in, #submit, #oin {
 				display: block;
 				margin: auto;
 			}
@@ -230,5 +228,6 @@
 			<br>
 			<button type="button" id="submit" onclick="f1($('#in').val())">Submit</button>
 		</div>
+		<p id="oin">-</p>
 	</body>
 </html>
