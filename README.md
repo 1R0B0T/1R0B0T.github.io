@@ -7,8 +7,8 @@ Link: [Link](https://agmpenguin2.github.io/main) <!-- [https://agmpenguin2.githu
 <details>
 <summary>Options</summary>
 
- * 1r0b00t
- * 1r0b00T
+ * 1r0b0t
+ * 1r0b0T
  * 1r0B0t
  * 1r0B0T
  * 1R0b0t
