@@ -11,7 +11,7 @@
 				// ReleaseType = Alpha (A), Beta (B), Release (No letter put down)
 				// Created 12/6/22 A.0.0.0.1 (originally A.0.0.1)
 				// 12/10/22 A-0.0.11 changed template from RT.MJ.RV.SRV.RN to RT-MV.RV.RN. This may change in official releases.
-				var v = "A-0.0.14";
+				var v = "A-0.0.15";
 				console.log("iRobot");
 				console.log(v);
 				console.log("Last Updated: 12/8/22");
@@ -25,8 +25,7 @@
 			
 			function f1(t) {
 				t = gT(t);
-				/* o1 hello o2 whatsup o3 name o4 howareyou o5 whatisnamefrom e1 montypythonandtheholygrail*/
-				var o1 = [
+				var o1 = [ // Hello
 					"hello",
 					"hellos",
 					"helo",
@@ -44,7 +43,7 @@
 					"hi skynet",
 					"hey skynet",
 				];
-				var o2 = [
+				var o2 = [ // What's Up
 					"whats up",
 					"what is up",
 					"whats is up",
@@ -55,7 +54,7 @@
 					"whats is happening",
 					"what is happening",
 				];
-				var o3 = [
+				var o3 = [ // Name
 					"what is your name",
 					"what your name",
 					"what is your names",
@@ -90,7 +89,7 @@
 					"who is you",
 					"who you",
 				];
-				var o4 = [ // Split into how are you and how are you doing?
+				var o4 = [ // How Are You						Split into how are you and how are you doing?
 					"how are you doing",
 					"how you doing",
 					"how are you",
@@ -98,7 +97,7 @@
 					"how you doin",
 					"how are you doin",
 				];
-				var o5 = [
+				var o5 = [ // What's Name From						Subject to change.
 					"what is skynet from",
 					"whats skynet from",
 					"what skynet from",
@@ -111,13 +110,37 @@
 					"skynet is from",
 					"skynet from what",
 				]
-				var o6 = [
+				var o6 = [ // What's Skynet
 					"what is skynet",
 					"whats is skynet",
 					"what skynet",
 					"whats skynet",
 				]
-				var e1 = [
+				var o7 = [ // What's Favorite Color
+					"what is your favorite color",
+					"whats your favorite color",
+					"whats is your favorite color",
+					"what is your favorite colors",
+					"whats is your favorite colors",
+					"whats your favorite colors",
+					"what are your favorite colors",
+					"what are your favorite color",
+					"whats are your favorite colors",
+					"whats are your favorite color",
+					"what is favorite color",
+					"whats is favorite color",
+					"what are favorite color",
+					"whats are favorite color",
+					"what is favorite colors",
+					"whats is favorite colors",
+					"what are favorite colors",
+					"whats are favorite colors",
+					"what favorite color",
+					"whats favorite color",
+					"what favorite colors",
+					"whats favorite colors",
+				]
+				var e1 = [ // Monty Python and the Holy Grail
 					"what is the airspeed velocity of an unladen swallow",
 				];
 				
@@ -133,6 +156,8 @@
 					o("Skynet is from Terminator (1984).");
 				} else if(iO(o6)) {
 					o("Skynet is the AI antagonist of the Terminator movies. Skynet was created on April 4, 1997, and became self-aware at 2:14 a.m., EDT, on August 29, 1997.");
+				} else if (iO(o7)) {
+					o("I like the color white, as it is all the colors at once.");
 				} else if(iO(e1)) {
 					o("African or European?");
 				} else {
