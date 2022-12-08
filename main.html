@@ -11,7 +11,7 @@
 				// ReleaseType = Alpha (A), Beta (B), Release (No letter put down)
 				// Created 12/6/22 A.0.0.0.1 (originally A.0.0.1)
 				// 12/10/22 A-0.0.11 changed template from RT.MJ.RV.SRV.RN to RT-MV.RV.RN. This may change in official releases.
-				var v = "A-0.0.17";
+				var v = "A-0.0.18";
 				console.log("iRobot");
 				console.log(v);
 				console.log("Last Updated: 12/8/22");
@@ -189,6 +189,7 @@
 				if(v.slice(0, 1) == " ") {
 					v = v.substring(1, v.length);
 				}
+				$("#oin").text(v);
 				return(v);
 			}
 				
